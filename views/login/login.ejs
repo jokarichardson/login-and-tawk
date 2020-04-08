@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Acesso ao portal</title>
+    <meta name="description" content="">
+    <meta name="viewport" >
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <form action="/logged" method="post" name="Login_Form" class="form-signin">
+                <img class="center-image"  src="/images/Martin Brower Web Logo.svg" />
+                <h3 style="text-align: center;" class="form-signin-heading">Informe os dados abaixo para acesso ao portal</h3>
+
+                <input type="text" class="form-control" name="username" placeholder="Usuário" required="" autofocus="" />
+                <input type="password" class="form-control" name="password" placeholder="Senha" required=""/>
+                <input type="hidden" name="hidStore" value="MCD Granja Vianna" />
+                <input type="hidden" name="hidEmail" value="george.richardson@martinbrower.com.br" />
+                <button class="btn btn-lg btn-primary btn-block" name="btnEnviar" value="Login" type="Submit">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
