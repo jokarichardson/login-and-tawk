@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Acesso ao portal</title>
     <meta name="description" content="">
-    <meta name="viewport" >
+    <meta name="viewport">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
@@ -14,25 +15,42 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
-        window.$crisp=[];
-        window.CRISP_WEBSITE_ID="9e44cf9d-ab3e-44be-b291-2f5f2ce58930";
-        (function(){
-            d=document;s=d.createElement("script");
-            s.src="https://client.crisp.chat/l.js";
-            s.async=1;
+        window.$crisp = [];
+        window.CRISP_WEBSITE_ID = "9e44cf9d-ab3e-44be-b291-2f5f2ce58930";
+        (function() {
+            d = document;
+            s = d.createElement("script");
+            s.src = "https://client.crisp.chat/l.js";
+            s.async = 1;
             d.getElementsByTagName("head")[0].appendChild(s);
         })();
     </script>
+    <script>
+        (function(d, t) {
+            var BASE_URL = "";
+            var g = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
+            g.src = BASE_URL + "/packs/js/sdk.js";
+            s.parentNode.insertBefore(g, s);
+            g.onload = function() {
+                window.chatwootSDK.run({
+                    websiteToken: 'tgTMUVrK9xRcFimGTBErCzmp',
+                    baseUrl: BASE_URL
+                })
+            }
+        })(document, "script");
+    </script>
 </head>
+
 <body>
     <div class="container">
         <div class="wrapper">
             <form action="/logged" method="post" name="Login_Form" class="form-signin">
-                <img class="center-image"  src="/images/Martin Brower Web Logo.svg" />
+                <img class="center-image" src="/images/Martin Brower Web Logo.svg" />
                 <h3 style="text-align: center;" class="form-signin-heading">Informe os dados abaixo para acesso ao portal</h3>
 
                 <input type="text" class="form-control" name="username" placeholder="Usuário" required="" autofocus="" />
-                <input type="password" class="form-control" name="password" placeholder="Senha" required=""/>
+                <input type="password" class="form-control" name="password" placeholder="Senha" required="" />
                 <input type="hidden" name="hidStore" value="MCD Granja Vianna" />
                 <input type="hidden" name="hidEmail" value="george.richardson@martinbrower.com.br" />
                 <button class="btn btn-lg btn-primary btn-block" name="btnEnviar" value="Login" type="Submit">Login</button>
@@ -40,4 +58,5 @@
         </div>
     </div>
 </body>
+
 </html>
