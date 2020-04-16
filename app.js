@@ -25,7 +25,7 @@ app.get('/jivo2', function(req, res) {
 app.post('/logged', function(req, res) {
     console.log('Username inputed: ' + req.body.username);
     console.log('Password inputed: ' + req.body.password);
-    console.log('Hidden field value: ' + req.body.hidDepartment);
+    console.log('Hidden field value:  ' + req.body.hidDepartment);
     res.render('login/logged', { data: req.body });
 });
 
