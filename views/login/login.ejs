@@ -13,32 +13,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    <!--Start of Tawk.to Script-->
-
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {},
-            Tawk_LoadStart = new Date();
-
-        (function() {
-
-            var s1 = document.createElement("script"),
-                s0 = document.getElementsByTagName("script")[0];
-
-            s1.async = true;
-
-            s1.src = 'https://embed.tawk.to/5e979d9d69e9320caac40356/default';
-
-            s1.charset = 'UTF-8';
-
-            s1.setAttribute('crossorigin', '*');
-
-            s0.parentNode.insertBefore(s1, s0);
-
-        })();
-    </script>
-
-    <!--End of Tawk.to Script-->
 </head>
 
 <body>
@@ -48,11 +22,13 @@
                 <img class="center-image" src="/images/Martin Brower Web Logo.svg" />
                 <h3 style="text-align: center;" class="form-signin-heading">Informe os dados abaixo para acesso ao portal</h3>
 
+                <select name="tipoCliente" class="form-control" required>
+                    <option value="" disabled selected>Selecione o cliente:</option>
+                    <option value="5e979d9d69e9320caac40356">Lanchonete</option>
+                    <option value="5e88f0d735bcbb0c9aadda7b">Pizzaria</option>
+                </select>
                 <input type="text" class="form-control" name="username" placeholder="Usuário" required="" autofocus="" />
-                <input type="password" class="form-control" name="password" placeholder="Senha" required="" />
-                <input type="hidden" name="hidStore" value="MCD Granja Vianna" />
-                <input type="hidden" name="hidEmail" value="george.richardson@martinbrower.com.br" />
-                <button class="btn btn-lg btn-primary btn-block" name="btnEnviar" value="Login" type="Submit">Login</button>
+                <button class="btn btn-lg btn-primary btn-block" name="btnEnviar" value="Login" type="Submit">Acessar</button>
             </form>
         </div>
     </div>

@@ -23,9 +23,8 @@ app.get('/jivo2', function(req, res) {
 });
 
 app.post('/logged', function(req, res) {
-    console.log('Username inputed: ' + req.body.username);
-    console.log('Password inputed: ' + req.body.password);
-    console.log('Hidden field value:  ' + req.body.hidDepartment);
+    console.log('Username informado: ' + req.body.username);
+    console.log('Tipo de Cliente: ' + req.body.tipoCliente);
     res.render('login/logged', { data: req.body });
 });
 

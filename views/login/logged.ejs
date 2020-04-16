@@ -16,58 +16,37 @@
     <!-- Tawk.to API Key a23dcedd73ec74be22fa77c3a6d76824fe0598b2 -->
     <!-- hash_mac for george.richardson@martinbrower.com.br -->
     <!-- de7b19def41217d3aa624a1762bb9b872e895654bd814106f3a849051677626a -->
-    <!--     <script type="text/javascript">
+    <script type="text/javascript">
         var Tawk_API = Tawk_API || {};
         var Tawk_LoadStart = new Date();
 
-        (function () {
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/5e88f0d735bcbb0c9aadda7b/default';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
-    <script type="text/javascript">
-        Tawk_API.onLoad = function () {
-            var hash_mac = sha256_with_internal_key('<%= data.hidEmail %>');
-
-            Tawk_API.setAttributes({
-                'name': '<%= data.username %>',
-                'email': '<%= data.hidEmail %>',
-                'loja': '<%= data.hidStore %>',
-                'hostname': 'teste',
-                'hash': hash_mac
-            }, function (error) { });
-
-        };
-    </script> -->
-    <!--Start of Tawk.to Script-->
-
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {},
-            Tawk_LoadStart = new Date();
-
         (function() {
-
             var s1 = document.createElement("script"),
-                s0 = document.getElementsByTagName("script")[0];
+                s0 = document.getElementsByTagName("script")[0],
+                destiny = 'https://embed.tawk.to/' + '<%= data.tipoCliente %>' + '/default';
 
             s1.async = true;
-
-            s1.src = 'https://embed.tawk.to/5e88f0d735bcbb0c9aadda7b/default';
-
+            s1.src = destiny;
             s1.charset = 'UTF-8';
-
             s1.setAttribute('crossorigin', '*');
-
             s0.parentNode.insertBefore(s1, s0);
-
         })();
     </script>
+    <script type="text/javascript">
+        /*         Tawk_API.onLoad = function () {
+                                                            var hash_mac = sha256_with_internal_key('<%= data.hidEmail %>');
+                                                            Tawk_API.setAttributes({
+                                                                'name': '<%= data.username %>',
+                                                                'email': '<%= data.hidEmail %>',
+                                                                'hash': hash_mac
+                                                            }, function (error) { });
 
-    <!--End of Tawk.to Script-->
+                                                        }; */
+        var Tawk_API = Tawk_API || {};
+        Tawk_API.visitor = {
+            name: '<%= data.username %>'
+        };
+    </script>
     <!--End of Tawk.to Script-->
 </head>
 
