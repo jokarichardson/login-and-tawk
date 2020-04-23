@@ -1,19 +1,23 @@
 {
-  "name": "login_and_tawk",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "dependencies": {
-    "ejs": "^3.0.2",
-    "express": "^4.17.1",
-    "express-ejs-layouts": "^2.5.0",
-    "express-layout": "^0.1.0",
-    "express-layouts": "^1.0.0"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "George Richardson",
-  "license": "ISC"
+    "name": "login_and_tawk",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "dependencies": {
+        "ejs": "^3.0.2",
+        "express": "^4.17.1",
+        "express-ejs-layouts": "^2.5.0",
+        "express-layout": "^0.1.0",
+        "express-layouts": "^1.0.0",
+        "marko": "^4.21.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.3"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon app.js"
+    },
+    "author": "George Richardson",
+    "license": "ISC"
 }

@@ -1,14 +1,4 @@
-module.exports = (express, app, bodyParser, path) => {
-    app.use(bodyParser.urlencoded({ extended: true }));
-
-    app.use(express.static(path.join(__dirname, '../public')));
-
-    app.set('views', path.join(__dirname, '/views'));
-    app.set('view engine', 'ejs');
-
-    app.get('/about', function(req, res) {
-        res.render('about');
-    });
+module.exports = (app) => {
 
     app.get('/', function(req, res) {
         res.render('login/login');
@@ -20,12 +10,16 @@ module.exports = (express, app, bodyParser, path) => {
         res.render('login/logged', { data: req.body });
     });
 
+    app.get('/about', function(req, res) {
+        res.render('about');
+    });
+
     app.use(function(req, res, next) {
         res.status(404);
 
         res.format({
             html: function() {
-                res.render('error/404', { url: req.url })
+                res.render('../views/error/404', { url: req.url })
             },
             json: function() {
                 res.json({ error: 'Not found' })
